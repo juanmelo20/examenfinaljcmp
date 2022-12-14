@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="../pagina del semestre/index.html"><img src="../pagina del semestre/img/icono regresar.png" id="Regresar"alt="" width="40px" height="40px" id="regresar"></a>
+
+    <fieldset>
+        <form action="" method="post" id="formclase">
+            <label for="">Nombre</label><br>
+            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre"><br>
+            <label for="">Telefono</label><br>
+            <input type="number" name="Telefono" id="Telefono" placeholder="Telefono"><br>
+            <label for="">Correo Electronico</label><br>
+            <input type="email" name="email" id="email" placeholder="email"><br>
+            <label for="">Talla del  calzado</label><br>
+            <input type="number" name="Talla" id="Talla" placeholder="Talla"><br>
+            <br>
+            <label for="">DIRECCION DE ENVIO</label><br><br>
+            <input type="text" name="direccion" id="Direccion" placeholder="Departamento"><br>
+            <input type="text" name="direccion" id="Direccion" placeholder="Ciudad"><br>
+            <input type="number" name="direccion" id="Direccion" placeholder="Codigo postal"><br>
+            <input type="text" name="direccion" id="Direccion" placeholder="Calle"><br>
+            <br>
+            <label for="">METODO DE PAGO</label><br>
+            <label for=""><img src="..//pagina del semestre/img/icono pse.jpg" alt="" width="40px" height="30px"> PAGAR VIA PSE</label>
+            <input type="radio" name="" id=""><br><br>
+            <label for=""><img src="..//pagina del semestre/img/icono efectivo.png" alt="" width="30px" height="20px" > EFECTIVO EN <br> PUNTOS DE PAGO</label>
+            <input type="radio" name="" id=""><br><br>
+            <button onclick="comprar()">COMPRAR</button>
+        </form>
+</fieldset>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        Swal.fire(
+            'PARA CONTINUAR CON LA COMPRA COMPLETA EL FORMULARIO'
+        )
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#formclase").validate({
+                rules:{
+                    Nombre:{required:true, minlength:3},
+                    Telefono:{required:true, minlength:10, maxlength:10},
+                    email:{required:true},
+                    Talla:{required:true},
+                },
+                messages:{
+                    Nombre:"*Campo obligatorio, minimo 3 caracteres",
+                    Telefono:{
+                        required:"*Campo obligatorio",
+                        minlength:"*Minimo 10 caracteres",
+                        maxlength:"Maximo 10 caracteres"
+                    },
+                    email:{
+                        required:"*Campo obligatorio"
+                    },
+                    Talla:{required:"*Campo Obligatorio"}
+                }
+            });
+        });
+    </script>
+    <script>
+        function comprar(){
+            Swet.fire(
+                'PROCESANDO COMPRAS'
+            )
+        }
+    </script>
+    <style>
+        label{
+            font-weight: 500;
+        }
+        label.error{
+            color:red;
+        }
+        input.error{
+            background-color: red;
+        }
+        body{
+            background: rgb(43,89,33);
+            background: linear-gradient(90deg, rgba(43,89,33,0.804359243697479) 7%, rgba(121,9,13,0.6138830532212884) 34%, rgba(47,56,154,0.6783088235294117) 66%, rgba(105,228,93,0.7483368347338936) 100%);
+            
+        }
+        
+        fieldset{
+            background-attachment: fixed;
+            margin: auto;
+            width: 400px;
+            text-align: center;
+            background-color: aqua;
+            background: rgb(166,175,23);
+            background: linear-gradient(90deg, rgba(166,175,23,1) 6%, rgba(9,121,82,1) 26%, rgba(19,125,148,1) 38%, rgba(23,63,180,1) 51%, rgba(20,167,158,1) 65%, rgba(42,198,178,1) 78%, rgba(156,213,29,1) 100%);
+            box-shadow: 0 0 10px rgb(0,0,5);
+        }
+        input{
+            margin: 10px;
+        }
+           
+    </style>
+</body>
+</html>
