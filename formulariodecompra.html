@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de ventas</title>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <script>
         Swal.fire(
-            'PARA CONTINUAR CON LA COMPRA COMPLETA EL FORMULARIO'
+            'PARA CONTINUAR CON LA COMPRA RELLENA EL FORMULARIO'
         )
     </script>
     <script>
@@ -69,7 +69,7 @@
     </script>
     <script>
         function comprar(){
-            Swet.fire(
+            Swal.fire(
                 'PROCESANDO COMPRAS'
             )
         }
@@ -83,9 +83,10 @@
         }
         input.error{
             background-color: red;
+            border-color:grey;
         }
         body{
-            background: rgb(43,89,33);
+            background: yellow;
             background: linear-gradient(90deg, rgba(43,89,33,0.804359243697479) 7%, rgba(121,9,13,0.6138830532212884) 34%, rgba(47,56,154,0.6783088235294117) 66%, rgba(105,228,93,0.7483368347338936) 100%);
             
         }
@@ -93,7 +94,7 @@
         fieldset{
             background-attachment: fixed;
             margin: auto;
-            width: 400px;
+            width: 350px;
             text-align: center;
             background-color: aqua;
             background: rgb(166,175,23);
@@ -102,6 +103,7 @@
         }
         input{
             margin: 10px;
+            padding:25;
         }
            
     </style>

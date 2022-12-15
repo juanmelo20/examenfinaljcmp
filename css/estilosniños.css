@@ -7,7 +7,7 @@ background: linear-gradient(90deg, rgba(38,63,153,1) 0%, rgba(135,150,200,1) 3%,
 }
 .contenedor{
     padding: 60px 0;
-    width: 90%;
+    width: 80%;
     max-width: 100%;
     margin: auto;
     overflow: hidden;
@@ -19,7 +19,7 @@ h1{
     text-align: center;
     margin: 0;
     padding: 0;
-    color: rgba(107, 8, 13, 0.87);
+    color: rgba(26, 24, 24, 0.87);
     font-weight: 900;
     font-size: 40px;
     z-index: 200;
@@ -30,7 +30,7 @@ nav a img{
 header{
 width: 100%;
 height: 600px;
-position: relative;
+position: fixed;
 background-image: url(../img/portadaniños.jpg);
 background-repeat: no-repeat;
 }
@@ -53,7 +53,7 @@ h2{
 h3{
     font-size: 40px;
     text-align: center;
-    color:rgb(177, 18, 18)
+    color:rgb(177, 121, 18)
 }
 p{
     font-size: 20px;
@@ -65,7 +65,7 @@ button:hover{
     text-decoration:solid;
     text-overflow: clip;
     text-shadow: 10px;
-    background-color: bisque;
+    background-color: rgb(231, 132, 11);
 }
 table{
     
